@@ -26,8 +26,3 @@ vars:
     description: Presentation Layer name
     default: Home
     prompt: What is your Presentation Layer name?
-  state_management:
-    type: enum
-    description: State Management
-    default: flutter_bloc
-    prompt: What State Management do you want to use?

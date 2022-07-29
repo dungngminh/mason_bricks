@@ -18,7 +18,7 @@ My collection of bricks created by me to help you build Flutter projects faster 
 
 | Brick                                                        | Description                                                  | Version |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
-| presentation_layer | A brick create a `presentation_layer` comes with logic with multi-choice state manangement(`bloc`, `change_notifier_provider`, `riverpod`, `getx`) | 0.0.1 (WIP)   |
+| presentation_layer | A brick create a `presentation_layer` comes with logic with multi-choice state manangement(`bloc`, `change_notifier_provider`, `riverpod`, `getx`) | 0.0.1 (WIP) - `bloc`   |
 
 ## Documentation
 
