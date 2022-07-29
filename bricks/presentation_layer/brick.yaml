@@ -1,10 +1,11 @@
 name: presentation_layer
-description: A new brick created with the Mason CLI.
+description: A brick to create a presentation layer by features with selected state management (current flutter_bloc)
+repository: https://github.com/dungngminh/mason_bricks/tree/master/bricks/presentation_layer
 
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.1.0+1
+version: 0.0.1+1
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
@@ -23,6 +24,6 @@ environment:
 vars:
   name:
     type: string
-    description: Presentation Layer name
+    description: Presentation Layer name (current using flutter_bloc for state management)
     default: Home
-    prompt: What is your Presentation Layer name?
+    prompt: What is your Presentation Layer name (current using flutter_bloc for state management)?
