@@ -22,7 +22,7 @@ My collection of bricks created by me to help you build Flutter projects faster 
 
 ## Documentation
 
-- [presentation_layer](https://github.com/dungngminh/mason_bricks/tree/main/bricks/presentation_layer)
+- [presentation_layer](https://github.com/dungngminh/mason_bricks/tree/master/bricks/presentation_layer)
 
 ## Maintainers
 
