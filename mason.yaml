@@ -5,6 +5,14 @@ bricks:
   # Run `mason make hello` to try it out.
   presentation_layer:
     path: bricks/presentation_layer
+    version: 0.0.1+2
+
+  http_client_handler:
+    path: bricks/http_client_handler
+    version: 0.0.1+1
+
+  http_exception:
+    path: bricks/http_exception
     version: 0.0.1+1
   # Bricks can also be imported via git url.
   # Uncomment the following lines to import

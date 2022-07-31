@@ -11,18 +11,19 @@
 My collection of bricks created by me to help you build Flutter projects faster I think.
 </p>
 
-
 ---
 
-## Bricks 🧱
+## 🧱 Bricks 
 
-| Brick                                                        | Description                                                  | Version |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
-| presentation_layer | A brick create a `presentation_layer` comes with logic with multi-choice state manangement(`bloc`, `change_notifier_provider`, `riverpod`, `getx`) | 0.0.1 (WIP) - `bloc`   |
+| Brick               | Description                                                                                                                                                        | Version              |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| presentation_layer  | A brick create a `presentation_layer` comes with logic with multi-choice state manangement(`bloc`, `change_notifier_provider`, `riverpod`, `getx`)                 | 0.0.1 (WIP) - `bloc` |
+| http_client_handler | A brick create a `http_client_handler` for communication, calling API with full methods, support file downloading, handling errors and exceptions using `http` library | WIP                  |
 
-## Documentation
+## :page_facing_up: Documentation
 
 - [presentation_layer](https://github.com/dungngminh/mason_bricks/tree/main/bricks/presentation_layer)
+- [http_client_handler](https://github.com/dungngminh/mason_bricks/tree/main/bricks/http_client_handler)
 
 ## Maintainers
 
