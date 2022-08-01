@@ -34,7 +34,6 @@ Future<void> run(HookContext context) async {
     context.vars = {
       ...context.vars,
       'exceptions': exceptions,
-      'notUsingSuperParams': !context.vars['use_super_parameters']
     };
   } on FileEmptyException {
     logger.alert(

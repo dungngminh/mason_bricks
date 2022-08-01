@@ -19,8 +19,8 @@ class {{type.pascalCase()}}Exception extends {{exception_file_name.pascalCase()}
    {{type.pascalCase()}}Exception({super.message = '{{message}}'}) : super({{statusCode}});
   {{/use_super_parameters}}
   
-  {{#notUsingSuperParams}}
+  {{^use_super_parameters}}
    {{type.pascalCase()}}Exception() : super({{statusCode}}, message:'{{message}}');
-  {{/notUsingSuperParams}}
+  {{/use_super_parameters}}
 } 
 {{/exceptions}}

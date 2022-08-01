@@ -1,3 +1,4 @@
+
 class HttpException implements Exception {
   HttpException(
     this.statusCode, {
@@ -13,18 +14,34 @@ class HttpException implements Exception {
   }
 }
 
-class UnauthorizedException extends HttpException {
-  UnauthorizedException({super.message = 'Unauthorized'}) : super(401);
-}
+class UnauthorizedException extends HttpException{
+  
+  
+  
+   UnauthorizedException() : super(401, message:'Unauthorized');
+  
+} 
 
-class BadRequestException extends HttpException {
-  BadRequestException({super.message = 'Bad Request'}) : super(400);
-}
+class BadRequestException extends HttpException{
+  
+  
+  
+   BadRequestException() : super(400, message:'Bad Request');
+  
+} 
 
-class TimeoutException extends HttpException {
-  TimeoutException({super.message = 'Request Timeout'}) : super(408);
-}
+class TimeoutException extends HttpException{
+  
+  
+  
+   TimeoutException() : super(408, message:'Request Timeout');
+  
+} 
 
-class ServerErrorException extends HttpException {
-  ServerErrorException({super.message = 'Internal Server Error'}) : super(500);
-}
+class ServerErrorException extends HttpException{
+  
+  
+  
+   ServerErrorException() : super(500, message:'Internal Server Error');
+  
+} 
