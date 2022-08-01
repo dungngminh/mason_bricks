@@ -1,4 +1,3 @@
-
 class {{exception_file_name.pascalCase()}} implements Exception {
   {{exception_file_name.pascalCase()}}(
     this.statusCode, {
@@ -9,9 +8,8 @@ class {{exception_file_name.pascalCase()}} implements Exception {
   final int statusCode;
 
   @override
-  String toString() {
-    return '$statusCode: $message';
-  }
+  String toString() =>
+      '$runtimeType(message: $message, statusCode: $statusCode)';
 }
 {{#exceptions}}
 class {{type.pascalCase()}}Exception extends {{exception_file_name.pascalCase()}}{

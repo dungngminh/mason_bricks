@@ -1,4 +1,3 @@
-
 import 'package:http/http.dart' as http;
 
 class {{class_name.pascalCase()}}{
