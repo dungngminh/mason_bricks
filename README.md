@@ -18,14 +18,14 @@ My collection of bricks created by me to help you build Flutter projects faster 
 | Brick               | Description                                                                                                                                                            | Version              |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | presentation_layer  | A brick create a `presentation_layer` comes with logic with multi-choice state manangement(`bloc`, `change_notifier_provider`, `riverpod`, `getx`)                     | 0.0.1 (WIP) - `bloc` |
+| http_exception      | A brick create `http_exception` file based on `http_exception.json` user defined for better http exception handling.                                                   | 0.0.1                |
 | http_client_handler | A brick create a `http_client_handler` for communication, calling API with full methods, support file downloading, handling errors and exceptions using `http` library | WIP                  |
-| http_exception      | A brick create `http_exception` file based on `http_exception.json` user defined for better http exception handling.                                                   | WIP                  |
 
 ## 📖 Documentation
 
-- [presentation_layer](https://github.com/dungngminh/mason_bricks/tree/main/bricks/presentation_layer)
-- [http_client_handler](https://github.com/dungngminh/mason_bricks/tree/main/bricks/http_client_handler)
-- [http_exception](https://github.com/dungngminh/mason_bricks/tree/main/bricks/http_exception)
+- [presentation_layer](https://github.com/dungngminh/mason_bricks/tree/master/bricks/presentation_layer)
+- [http_exception](https://github.com/dungngminh/mason_bricks/tree/master/bricks/http_exception)
+- [http_client_handler](https://github.com/dungngminh/mason_bricks/tree/master/bricks/http_client_handler)
 
 ## 🌟 Maintainers
 

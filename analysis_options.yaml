@@ -1,3 +1,15 @@
 analyzer:
   exclude:
     - bricks/**/__brick__/**
+
+linter:
+  rules:
+    public_member_api_docs: false
+    require_trailing_commas: true
+    prefer_single_quotes: true
+    cascade_invocations: true
+    sort_child_properties_last: true
+    sort_constructors_first: true
+    sort_unnamed_constructors_first: true
+    unnecessary_string_interpolations: true
+    omit_local_variable_types: true
