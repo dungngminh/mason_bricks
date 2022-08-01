@@ -18,7 +18,7 @@ My collection of bricks created by me to help you build Flutter projects faster 
 | Brick               | Description                                                                                                                                                            | Version              |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | presentation_layer  | A brick create a `presentation_layer` comes with logic with multi-choice state manangement(`bloc`, `change_notifier_provider`, `riverpod`, `getx`)                     | 0.0.1 (WIP) - `bloc` |
-| http_exception      | A brick create `http_exception` file based on `.json` user defined for better http exception handling.                                                                 | 0.0.1                |
+| http_exception      | A brick create `http_exception` file based on `.json` user defined for better http exception handling.                                                                 | 0.0.2                |
 | http_client_handler | A brick create a `http_client_handler` for communication, calling API with full methods, support file downloading, handling errors and exceptions using `http` library | WIP                  |
 
 ## 📖 Documentation
