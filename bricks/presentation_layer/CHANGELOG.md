@@ -1,3 +1,7 @@
+# 0.2.1
+
+- docs(README.md): update readme
+
 # 0.2.0
 
 - Release v0.2.0: add `getx` option for state management
