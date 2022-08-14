@@ -11,11 +11,13 @@ Future<void> run(HookContext context) async {
   final isRiverpod = stm == 'riverpod';
   final isMobx = stm == 'mobx';
 
-  bool? useEquatable;
+  var useEquatable = false;
 
   if (isBloc || isCubit) {
-    useEquatable =
-        logger.confirm('Do you want to use Equatable', defaultValue: true);
+    useEquatable = logger.confirm(
+      'Do you want to use Equatable',
+      defaultValue: true,
+    );
   }
 
   context.vars = {
@@ -27,11 +29,11 @@ Future<void> run(HookContext context) async {
     'riverpod': isRiverpod,
     'mobx': isMobx,
     'equatable': useEquatable,
-  };                                   
+  };
 
-  final progressLogger = logger.progress(
-    'Generating {{name}} with {{stm}} ${useEquatable == true ? 'with Equatable' : ''}',
-  );
-  await Future.delayed(const Duration(milliseconds: 500));
-  progressLogger.complete();
+  logger
+      .progress(
+        'Generating {{name}} with {{stm}}${useEquatable ? ' with Equatable' : ''}',
+      )
+      .complete();
 }

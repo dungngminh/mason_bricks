@@ -5,7 +5,7 @@ bricks:
   # Run `mason make hello` to try it out.
   presentation_layer:
     path: bricks/presentation_layer
-    version: 0.0.2
+    version: 0.2.0
 
   http_client_handler:
     path: bricks/http_client_handler

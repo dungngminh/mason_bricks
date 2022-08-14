@@ -27,9 +27,9 @@ mason make presentation_layer
 | Variable | Description                            | Default | Type     |
 | -------- | -------------------------------------- | ------- | -------- |
 | `name`   | Presentation Layer name                | `Home`  | `string` |
-| `stm`    | State Management (current bloc, cubit) | `bloc`  | `enum`   |
+| `stm`    | State Management (current bloc, cubit) |         | `enum`   |
 
-## 📦 Output 
+## 📦 Output
 
 ### Generated folder architecture with name `home` and `bloc` for state management:
 
