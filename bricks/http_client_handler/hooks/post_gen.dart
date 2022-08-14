@@ -1,5 +1,16 @@
 import 'package:mason/mason.dart';
 
-void run(HookContext context) {
-  // TODO: add post-generation logic.
+Future<void> run(HookContext context) async {
+  context.logger.progress('Generating http_exception.dart');
+
+  // await generator.generate(
+  //   DirectoryGeneratorTarget(
+  //     Directory.current,
+  //   ),
+  //   fileConflictResolution: FileConflictResolution.overwrite,
+  //   logger: Logger(),
+  // );
+
+  context.logger.success('Genereated http_exception.dart');
+  ///
 }

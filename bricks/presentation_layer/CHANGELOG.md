@@ -1,6 +1,10 @@
-# 0.0.1+1
+# 0.0.2
 
-- `presentation_layer`: docs(add README.md)
+- Release v0.0.2: add `cubit` option for state management
+
+# 0.0.1+2
+
+- docs: add README.md
 
 # 0.0.1+1
 

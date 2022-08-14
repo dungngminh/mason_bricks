@@ -2,27 +2,36 @@
 
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
-A brick to create a presentation layer by features with selected state management (current flutter_bloc)
+A brick to create a presentation layer by features with selected state management (current bloc, cubit).
 
 ## 🚧 Requirements
 
-Make sure you have the libraries of state management you want to use, current is `bloc`, you have the [`bloc`][2] and [`flutter_bloc`][3] libraries inside your `pubspec.yaml` file.
+Make sure you have the libraries of state management you want to use, for example: `bloc` and `cubit`, you have the [`bloc`][1] or [`flutter_bloc`][2] ([`equatable`][3] if you want to use `Equatable`) libraries inside your `pubspec.yaml` file.
 
 ## 🚀 Usage
 
+### Full command:
+
 ```sh
-mason make presentation_layer -o ./output-path --name presentation_layer_name
+mason make presentation_layer -o ./output-path --name name --stm bloc/cubit
+```
+
+### Command:
+
+```sh
+mason make presentation_layer
 ```
 
 ## ✨ Variables
 
-| Variable | Description                                                               | Default | Type     |
-| -------- | ------------------------------------------------------------------------- | ------- | -------- |
-| `name`   | Presentation Layer name (current using flutter_bloc for state management) | `Home`  | `string` |
+| Variable | Description                            | Default | Type     |
+| -------- | -------------------------------------- | ------- | -------- |
+| `name`   | Presentation Layer name                | `Home`  | `string` |
+| `stm`    | State Management (current bloc, cubit) | `bloc`  | `enum`   |
 
 ## Output 📦
 
-Generated folder architecture with name `home`:
+### Generated folder architecture with name `home` and `bloc` for state management:
 
     .
     ├── home
@@ -37,6 +46,25 @@ Generated folder architecture with name `home`:
     │   └── home.dart
     └── ...
 
-[1]: https://github.com/felangel/bloc
-[2]: https://github.com/felangel/bloc/tree/master/packages/bloc
-[3]: https://github.com/felangel/bloc/tree/master/packages/flutter_bloc
+### Generated folder architecture with name is `home` and `cubit` for state management:
+
+        .
+        ├── home
+        │   ├── cubit
+        │   │   ├── home_cubit.dart
+        │   │   └── home_state.dart
+        │   ├── view
+        │   │   └── home_page.dart (home_page.dart has Page-View pattern)
+        │   ├── widget
+        │   │   └── .gitkeep
+        │   └── home.dart
+        └── ...
+
+<!-- ### Generated folder architecture with name is `home` and `getx` for state management: -->
+
+[1]: https://pub.dev/packages/bloc
+[2]: https://pub.dev/packages/flutter_bloc
+[3]: https://pub.dev/packages/equatable
+[4]: https://pub.dev/packages/provider
+[5]: https://pub.dev/packages/get
+[6]: https://pub.dev/packages/flutter_riverpod

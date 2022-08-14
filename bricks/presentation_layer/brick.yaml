@@ -1,11 +1,11 @@
 name: presentation_layer
-description: A brick to create a presentation layer by features with selected state management (current flutter_bloc)
+description: A brick to create a presentation layer by features with selected state management.
 repository: https://github.com/dungngminh/mason_bricks/tree/master/bricks/presentation_layer
 
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.0.1+2
+version: 0.0.2
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
@@ -26,4 +26,18 @@ vars:
     type: string
     description: Presentation Layer name (current using flutter_bloc for state management)
     default: Home
-    prompt: What is your Presentation Layer name (current using flutter_bloc for state management)?
+    prompt: What is your Presentation Layer name?
+
+  stm:
+    type: enum
+    description: State management for presentation_layer`
+    default: bloc
+    prompt: What is State Management you want to use
+    values:
+      - bloc
+      - cubit
+      # - get_x
+      # - change_notifier_provider
+      # - riverpod
+      # - mobx
+      # - rx_redux
