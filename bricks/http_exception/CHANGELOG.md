@@ -1,3 +1,12 @@
+# 0.1.1
+
+- docs: update README.md
+
+# 0.1.0
+
+- feat: make `statusCode` nullable to handle unknown status codes.
+- enhancement(post_gen): add `dart format` on generated files.
+
 # 0.0.3+1
 
 - enhancement: `toString()` method added `runtimeType` property.

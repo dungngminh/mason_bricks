@@ -65,13 +65,13 @@ Future<void> run(HookContext context) async {
 class ExceptionInfo {
   const ExceptionInfo({
     required this.type,
-    required this.statusCode,
-    required this.message,
+    this.statusCode,
+    this.message,
   });
 
   final String type;
-  final int statusCode;
-  final String message;
+  final int? statusCode;
+  final String? message;
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{

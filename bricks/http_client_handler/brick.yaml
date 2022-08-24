@@ -26,3 +26,11 @@ vars:
     description: Your Http Client Handler class name
     default: BaseHttpClient
     prompt: What is your Http Client Handler class name?
+
+  lib:
+    type: enum
+    default: http
+    prompt: What is your Http library you want to use?
+    values:
+      - http #(https://pub.dev/packages/http)
+      - dio #(https://pub.dev/packages/dio)

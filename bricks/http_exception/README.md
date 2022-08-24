@@ -14,7 +14,7 @@ A brick create `http_exception` file based on `.json` user defined for better ht
 [
   {
     "type": "exception_type",
-    "code": "exception_code",
+    "code": "exception_code", # optional
     "message": "exception_message"
   }
 ]
@@ -87,6 +87,10 @@ mason make http_exception -o ./output-path --exception_info_path path --exceptio
     "type": "server_error",
     "code": 500,
     "message": "Internal Server Error"
+  },
+  {
+    "type": "unhandled_error",
+    "message": "Unhandled Error"
   }
 ]
 ```
@@ -97,71 +101,92 @@ Generated a file after format with name `exception_file_name.dart` in `output-pa
 
 ```dart
 class HttpException implements Exception {
-  HttpException(
-    this.statusCode, {
+  HttpException({
+    this.statusCode,
     this.message = '',
   });
 
   final String message;
-  final int statusCode;
+  final int? statusCode;
 
   @override
-  String toString() {
-    return '$statusCode: $message';
-  }
+  String toString() =>
+      '$runtimeType(message: $message, statusCode: $statusCode)';
 }
 
 class UnauthorizedException extends HttpException {
-  UnauthorizedException() : super(401, message: 'Unauthorized');
+  UnauthorizedException() : super(statusCode: 401, message: 'Unauthorized');
 }
 
 class BadRequestException extends HttpException {
-  BadRequestException() : super(400, message: 'Bad Request');
+  BadRequestException() : super(statusCode: 400, message: 'Bad Request');
 }
 
 class TimeoutException extends HttpException {
-  TimeoutException() : super(408, message: 'Request Timeout');
+  TimeoutException() : super(statusCode: 408, message: 'Request Timeout');
 }
 
 class ServerErrorException extends HttpException {
-  ServerErrorException() : super(500, message: 'Internal Server Error');
+  ServerErrorException()
+      : super(statusCode: 500, message: 'Internal Server Error');
 }
+
+class UnhandledErrorException extends HttpException {
+  UnhandledErrorException() : super(message: 'Unhandled Error');
+}
+
 
 ```
 
 If use `super_parameters` is `true`, the generated file after format will be like this:
 
 ```dart
-
 class HttpException implements Exception {
-  HttpException(
-    this.statusCode, {
+  HttpException({
+    this.statusCode,
     this.message = '',
   });
 
   final String message;
-  final int statusCode;
+  final int? statusCode;
 
   @override
-  String toString() {
-    return '$statusCode: $message';
-  }
+  String toString() =>
+      '$runtimeType(message: $message, statusCode: $statusCode)';
 }
 
 class UnauthorizedException extends HttpException {
-  UnauthorizedException({super.message = 'Unauthorized'}) : super(401);
+  UnauthorizedException({
+    super.statusCode = 401,
+    super.message = 'Unauthorized',
+  });
 }
 
 class BadRequestException extends HttpException {
-  BadRequestException({super.message = 'Bad Request'}) : super(400);
+  BadRequestException({
+    super.statusCode = 400,
+    super.message = 'Bad Request',
+  });
 }
 
 class TimeoutException extends HttpException {
-  TimeoutException({super.message = 'Request Timeout'}) : super(408);
+  TimeoutException({
+    super.statusCode = 408,
+    super.message = 'Request Timeout',
+  });
 }
 
 class ServerErrorException extends HttpException {
-  ServerErrorException({super.message = 'Internal Server Error'}) : super(500);
+  ServerErrorException({
+    super.statusCode = 500,
+    super.message = 'Internal Server Error',
+  });
+}
+
+class UnhandledErrorException extends HttpException {
+  UnhandledErrorException({
+    super.message = 'Unhandled Error',
+  });
 }
 
 ```

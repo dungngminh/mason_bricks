@@ -1,3 +1,7 @@
+# 0.2.2
+
+- fix(getx): fix `widget/` directory.
+
 # 0.2.1
 
 - docs(README.md): update readme

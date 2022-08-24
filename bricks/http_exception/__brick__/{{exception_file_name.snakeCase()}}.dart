@@ -1,11 +1,11 @@
 class {{exception_file_name.pascalCase()}} implements Exception {
   {{exception_file_name.pascalCase()}}(
-    this.statusCode, {
-    this.message = '',
+    {this.statusCode, 
+    this.message,
   });
 
-  final String message;
-  final int statusCode;
+  final String? message;
+  final int? statusCode;
 
   @override
   String toString() =>
@@ -14,11 +14,11 @@ class {{exception_file_name.pascalCase()}} implements Exception {
 {{#exceptions}}
 class {{type.pascalCase()}}Exception extends {{exception_file_name.pascalCase()}}{
   {{#use_super_parameters}}
-   {{type.pascalCase()}}Exception({super.message = '{{message}}'}) : super({{statusCode}});
+   {{type.pascalCase()}}Exception({ {{#statusCode}}super.statusCode = {{statusCode}},{{/statusCode}}super.message = '{{message}}',});
   {{/use_super_parameters}}
   
   {{^use_super_parameters}}
-   {{type.pascalCase()}}Exception() : super({{statusCode}}, message:'{{message}}');
+   {{type.pascalCase()}}Exception() : super( {{#statusCode}}statusCode:{{statusCode}},{{/statusCode}}message:'{{message}}');
   {{/use_super_parameters}}
 } 
 {{/exceptions}}

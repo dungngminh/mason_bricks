@@ -18,5 +18,9 @@
     "type": "server_error",
     "code": 500,
     "message": "Internal Server Error"
+  },
+  {
+    "type": "unhandled_error",
+    "message": "Unhandled Error"
   }
 ]
