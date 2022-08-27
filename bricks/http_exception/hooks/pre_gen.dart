@@ -9,7 +9,7 @@ Future<void> run(HookContext context) async {
   final userInputPath = context.vars['exception_info_path'];
   if (userInputPath == 'assets/exception_info.json') {
     final directory = Directory.current.path;
-    path = directory + '/${userInputPath}';
+    path = directory + '/$userInputPath';
   } else {
     path = userInputPath;
   }
