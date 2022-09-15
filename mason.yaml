@@ -1,6 +1,6 @@
 bricks:
-  presentation_layer: 0.2.2
-  http_client_handler: 0.0.1+1
+  presentation_layer: 0.2.3
+  # http_client_handler: 0.0.1
   http_exception: 0.1.1
   linter:
     path: own/linter

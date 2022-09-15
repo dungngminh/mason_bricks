@@ -1,3 +1,7 @@
+# 0.2.3
+
+- enhancement: add `dart format` and `dart fix --apply` for formating and fixing after generating a new brick.
+
 # 0.2.2
 
 - fix(getx): fix `widget/` directory.
